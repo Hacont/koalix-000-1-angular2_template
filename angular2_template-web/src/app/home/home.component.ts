@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { AppState } from '../app.service';
 import { Title } from './title';
 import { XLarge } from './x-large';
-import {InputText, ToggleButton} from 'primeng/primeng';
+import { InputText, ToggleButton } from 'primeng/primeng';
 
 @Component({
   // The selector is what angular internally uses

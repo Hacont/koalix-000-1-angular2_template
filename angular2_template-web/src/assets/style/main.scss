@@ -1,4 +1,25 @@
-@import "app";
+// -----------------------------------------------------------------------------
+// UI Styleguide Name: USB-004-4
+// Version: 1.0
+// -----------------------------------------------------------------------------
 
+// Roboto from Google Fonts
+// -----------------------------------------------------------------------------
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic,500,500italic);
+
+// Font Awesome
+// TO DO: Find a way to include this as SASS and not precompiled CSS
+// -----------------------------------------------------------------------------
+@import "../../../node_modules/font-awesome/css/font-awesome.min.css";
+
+// PrimeNG
+// -----------------------------------------------------------------------------
 @import "../../../node_modules/primeui/primeui-ng-all.css";
-@import "../../../node_modules/primeui/themes/bootstrap/theme.css";
+
+// Bootstrap
+// -----------------------------------------------------------------------------
+@import "bootstrap";
+
+// Angular2 app-specific stylesheets
+// -----------------------------------------------------------------------------
+@import "app";

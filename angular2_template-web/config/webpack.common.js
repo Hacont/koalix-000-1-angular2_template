@@ -18,7 +18,7 @@ const HtmlElementsPlugin = require('./html-elements-plugin');
  * Webpack Constants
  */
 const METADATA = {
-  title: 'koalix-000-1 - angular2_template',
+  title: 'USB-004-4 - Dashboard',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
@@ -164,6 +164,26 @@ module.exports = {
         test: /\.scss$/,
         loaders: ["style", "css", "sass"]
       },
+      
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        // Inline small woff files and output them below font/.
+        // Set mimetype just in case.
+        loader: 'url',
+        query: {
+          name: 'font/[hash].[ext]',
+          limit: 5000,
+          mimetype: 'application/font-woff'
+        }
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file',
+        query: {
+          name: 'font/[hash].[ext]'
+        }
+      },
+
       /*
        * Raw loader support for *.css files
        * Returns file content as string
