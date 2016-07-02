@@ -2,11 +2,9 @@
  * Angular 2 decorators and services
  */
 import { Component, ViewEncapsulation } from '@angular/core';
-import { RouteConfig, Router } from '@angular/router-deprecated';
 
-import { AppState } from './app.service';
-import { Home } from './home';
-import { RouterActive } from './router-active';
+import { SideMenu} from './side-menu';
+
 
 /*
  * App Component
@@ -14,45 +12,26 @@ import { RouterActive } from './router-active';
  */
 @Component({
   selector: 'app',
-  pipes: [ ],
-  providers: [ ],
-  directives: [ RouterActive ],
   encapsulation: ViewEncapsulation.None,
-  template: `
-    <span router-active>
-      <button [routerLink]=" ['Index'] ">
-        Index
-      </button>
-    </span>
-    <span router-active>
-      <button [routerLink]=" ['Home'] ">
-        Home
-      </button>
-    </span>
-    <span router-active>
-      <button [routerLink]=" ['About'] ">
-        About
-      </button>
-    </span>
-
-    <main>
-      <router-outlet></router-outlet>
-    </main>
+  template: `  
+    <div class="ui-g">
+        <div class="ui-g-2 ui-g-nopad">
+            <side_menu></side_menu>
+        </div>
+        <div class="ui-g-10 ui-g-nopad">
+            <div class="ui-g-12">12</div>
+            <div class="ui-g-4">4</div>
+            <div class="ui-g-4">4</div>
+            <div class="ui-g-4">4</div>
+        </div>
+    </div>
   `
 })
-@RouteConfig([
-  { path: '/home',  name: 'Home',  component: Home },
-  // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
-  { path: '/about', name: 'About', loader: () => require('es6-promise!./about')('About') }
-])
+
 export class App {
   loading = false;
-  name = 'Dashboard';
+  name = 'Angular2 Template';
 
-  constructor(
-    public appState: AppState) {
-
-  }
 
   ngOnInit() {
     console.log('Initial App State', this.appState.state);

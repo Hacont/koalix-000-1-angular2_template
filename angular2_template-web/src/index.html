@@ -19,18 +19,14 @@
 
 
 </head>
+    <body>
 
-<body>
+    <app>Loading...</app>
 
-<app>
-    Loading...
-</app>
+    <% if (webpackConfig.metadata.isDevServer) { %>
+    <!-- Webpack Dev Server reload -->
+        <script src="/webpack-dev-server.js"></script>
+    <% } %>
 
-<% if (webpackConfig.metadata.isDevServer) { %>
-<!-- Webpack Dev Server reload -->
-<script src="/webpack-dev-server.js"></script>
-
-<% } %>
-
-</body>
+    </body>
 </html>
