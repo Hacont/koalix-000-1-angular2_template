@@ -12,7 +12,7 @@
 
     <artifactId>angular2_template-package</artifactId>
 
-    <packaging>ear</packaging>
+    <packaging>war</packaging>
 
     <dependencies>
 
