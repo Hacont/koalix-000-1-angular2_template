@@ -1,5 +1,4 @@
 target/
-.DS_Store
 .idea/
 /angular2_template-parent.iml
 /angular2_template-package/angular2_template-package.iml
