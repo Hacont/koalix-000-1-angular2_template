@@ -15,7 +15,6 @@
     <modules>
         <module>angular2_template-service</module>
         <module>angular2_template-web</module>
-        <module>angular2_template-package</module>
     </modules>
 
     <properties>
